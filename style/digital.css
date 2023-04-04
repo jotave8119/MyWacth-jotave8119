@@ -1,0 +1,118 @@
+
+.watchBox{
+    background-color: transparent;
+    position: relative;
+    margin-top: 80px;
+    border: solid 3px var(--content);
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    padding: 1em;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--content);
+    perspective: 2em;
+    font-size: 3rem;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--content),
+      0px 0px 0.5em 0px var(--content);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--content),
+      0px 0px 0.5em 0px var(--content);
+    box-shadow: inset 0px 0px 0.5em 0px var(--content),
+      0px 0px 0.5em 0px var(--content);
+    animation: border-flicker 2s linear infinite;
+}
+
+.watchBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--content);
+    pointer-events: none;
+  }
+  
+  .watchBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--content);
+    box-shadow: 0 0 2em 0.2em var(--content);
+    transition: opacity 100ms linear;
+  }
+
+  .watchBox:hover{
+    background-color: var(--content);
+    color: var(--text);
+  }
+
+@keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  h1{
+    color: var(--text);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 45px;
+    text-align: center;
+    animation: fadeInDown 1s;
+  }
+
+  
+a{
+    margin-top: 150px;
+    width: 185px;
+    height: 40px;
+    border: solid 2px var(--text);
+    font-size: 1.1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--text);
+}
+
+a:hover{
+  box-shadow: #35baf8 0px 2px 4px 0px, #35baf8 0px 2px 16px 0px;
+  background-color: var(--content);
+  border: solid 2px var(--content);
+  transition: 0.5s ease-in-out;
+}
+
+  @media(min-width:768px){
+    .watchBox{
+        width: 400px;
+        
+    }
+  }

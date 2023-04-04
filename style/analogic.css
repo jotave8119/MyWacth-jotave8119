@@ -1,0 +1,151 @@
+main {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    color: var(--text);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    animation: fadeInDown 1s;
+  }
+
+.clock {
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid var(--content);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #51c0f0a0 0px 2px 4px 0px, #46b7e7b3 0px 2px 16px 0px;
+    animation: fadeIn 1s;
+}
+
+
+a{
+    margin-top: 80px;
+    width: 185px;
+    height: 40px;
+    border: solid 2px var(--text);
+    font-size: 1.1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--text);
+    animation: fadeIn 1s;
+}
+
+a:hover{
+  box-shadow: #35baf8 0px 2px 4px 0px, #35baf8 0px 2px 16px 0px;
+  background-color: var(--content);
+  border: solid 2px var(--content);
+  transition: 0.5s ease-in-out;
+}
+
+.number {
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    color: var(--content);
+}
+
+.number-1 {
+    transform: rotate(30deg);
+}
+
+.number-2 {
+    transform: rotate(60deg);
+}
+
+.number-3 {
+    transform: rotate(90deg);
+}
+
+.number-4 {
+    transform: rotate(120deg);
+}
+
+.number-5 {
+    transform: rotate(150deg);
+}
+
+.number-6 {
+    transform: rotate(180deg);
+}
+
+.number-7 {
+    transform: rotate(210deg);
+}
+
+.number-8 {
+    transform: rotate(240deg);
+}
+
+.number-9 {
+    transform: rotate(270deg);
+}
+
+.number-10 {
+    transform: rotate(300deg);
+}
+
+.number-11 {
+    transform: rotate(330deg);
+}
+
+.number-12 {
+    transform: rotate(360deg);
+}
+
+.second-hand {
+    width: 5px;
+    height: 120px;
+    background-color: var(--second-pointer);
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.minute-hand {
+    width: 8px;
+    height: 140px;
+    background-color: var(--minute-pointer);
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 12px;
+    height: 105px;
+    background-color: var(--hour-pointer);
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    background-color: var(--second-pointer);
+    border-radius: 20px;
+    position: absolute;
+}

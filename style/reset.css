@@ -1,0 +1,31 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--background-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
+
+:root{
+    --text:#ffffff;
+    --content:#35b8fa;
+    --background-black:#000000;
+    --hour-pointer:#222;
+    --minute-pointer:#333;
+    --second-pointer:#a52a2a;
+}
